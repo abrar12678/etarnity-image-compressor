@@ -1,13 +1,14 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+
 export default function PrivacyPolicyPage() {
     return (
         <main className="min-h-screen bg-white text-gray-900">
             <SiteHeader />
 
-            <section className="border-b border-gray-100 bg-white">
-                <div className="mx-auto max-w-4xl px-6 py-16">
-                    <span className="inline-block rounded-full bg-gray-100 px-4 py-1 text-sm font-medium text-gray-700">
+            <section className="border-b border-orange-100 bg-white">
+                <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+                    <span className="inline-block rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-700">
                         Privacy Policy
                     </span>
 
@@ -22,9 +23,9 @@ export default function PrivacyPolicyPage() {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-4xl px-6 py-16">
-                <div className="space-y-10 text-gray-600">
-                    <div>
+            <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+                <div className="space-y-8 text-gray-600">
+                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             1. File Processing
                         </h2>
@@ -35,7 +36,7 @@ export default function PrivacyPolicyPage() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             2. Personal Information
                         </h2>
@@ -45,7 +46,7 @@ export default function PrivacyPolicyPage() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             3. Analytics and Advertising
                         </h2>
@@ -57,7 +58,7 @@ export default function PrivacyPolicyPage() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             4. Changes to This Policy
                         </h2>
@@ -67,7 +68,7 @@ export default function PrivacyPolicyPage() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             5. Contact
                         </h2>

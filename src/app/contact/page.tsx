@@ -6,9 +6,9 @@ export default function ContactPage() {
         <main className="min-h-screen bg-white text-gray-900">
             <SiteHeader />
 
-            <section className="border-b border-gray-100 bg-white">
-                <div className="mx-auto max-w-4xl px-6 py-16">
-                    <span className="inline-block rounded-full bg-gray-100 px-4 py-1 text-sm font-medium text-gray-700">
+            <section className="border-b border-orange-100 bg-white">
+                <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+                    <span className="inline-block rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-700">
                         Contact
                     </span>
 
@@ -23,8 +23,8 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-4xl px-6 py-16">
-                <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
+            <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+                <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
                     <h2 className="text-2xl font-semibold text-gray-900">
                         Get in touch
                     </h2>
@@ -34,7 +34,7 @@ export default function ContactPage() {
                         general questions related to Etarnity Image Compressor.
                     </p>
 
-                    <div className="mt-8 rounded-2xl bg-white p-6">
+                    <div className="mt-8 rounded-2xl border border-orange-100 bg-white p-6">
                         <p className="text-sm font-medium text-gray-500">Email</p>
                         <p className="mt-2 text-lg font-semibold text-gray-900">
                             info@email.com
