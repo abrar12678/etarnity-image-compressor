@@ -2,64 +2,85 @@ import ImageCompressor from "@/components/ImageCompressor";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import {
+  UploadIcon,
+  LightningIcon,
+  ShieldIcon,
+  ImageIcon,
+  DownloadIcon,
+} from "@/components/Icons";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <SiteHeader />
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div className="grid items-center gap-12 md:grid-cols-2">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-24">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
           <div>
-            <span className="inline-block rounded-full bg-gray-100 px-4 py-1 text-sm font-medium text-gray-700">
+            <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-1.5 text-sm font-medium text-orange-700">
+              <ImageIcon className="h-4 w-4" />
               Free Online Tool
             </span>
 
-            <h2 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-gray-900 md:text-5xl">
+            <h2 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl">
               Compress JPG, PNG, and WebP images in seconds
             </h2>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+            <p className="mt-6 max-w-xl text-base leading-8 text-gray-600 sm:text-lg">
               Reduce image file size without unnecessary steps. Fast, simple,
               and built for creators, freelancers, students, and businesses.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#compressor"
-                className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
               >
+                <UploadIcon className="h-4 w-4" />
                 Start Compressing
               </a>
 
               <a
                 href="#features"
-                className="rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-800 transition hover:bg-gray-50"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-orange-200 bg-white px-6 py-3 text-sm font-semibold text-gray-800 transition hover:bg-orange-50"
               >
+                <LightningIcon className="h-4 w-4" />
                 Learn More
               </a>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-gray-200 p-4">
-                <p className="text-sm font-semibold text-gray-900">Free to use</p>
-                <p className="mt-1 text-sm text-gray-500">
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                <div className="flex items-center gap-2 text-orange-600">
+                  <ImageIcon className="h-4 w-4" />
+                  <p className="text-sm font-semibold text-gray-900">
+                    Free to use
+                  </p>
+                </div>
+                <p className="mt-2 text-sm text-gray-500">
                   No sign up required
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-gray-200 p-4">
-                <p className="text-sm font-semibold text-gray-900">
-                  Fast processing
-                </p>
-                <p className="mt-1 text-sm text-gray-500">
+              <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                <div className="flex items-center gap-2 text-orange-600">
+                  <LightningIcon className="h-4 w-4" />
+                  <p className="text-sm font-semibold text-gray-900">
+                    Fast processing
+                  </p>
+                </div>
+                <p className="mt-2 text-sm text-gray-500">
                   Compress in your browser
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-gray-200 p-4">
-                <p className="text-sm font-semibold text-gray-900">Secure</p>
-                <p className="mt-1 text-sm text-gray-500">
+              <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                <div className="flex items-center gap-2 text-orange-600">
+                  <ShieldIcon className="h-4 w-4" />
+                  <p className="text-sm font-semibold text-gray-900">Secure</p>
+                </div>
+                <p className="mt-2 text-sm text-gray-500">
                   Your files stay on your device
                 </p>
               </div>
@@ -77,7 +98,7 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
             <h3 className="text-3xl font-bold tracking-tight text-gray-900">
               How it works
@@ -88,9 +109,9 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
-                1
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white">
+                <UploadIcon className="h-5 w-5" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 Upload your image
@@ -100,9 +121,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
-                2
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white">
+                <LightningIcon className="h-5 w-5" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 Compress instantly
@@ -113,9 +134,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
-                3
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white">
+                <DownloadIcon className="h-5 w-5" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 Download the result
@@ -129,8 +150,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-6xl px-6">
+      <section id="features" className="bg-orange-50 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
             <h3 className="text-3xl font-bold tracking-tight text-gray-900">
               Why use Etarnity Image Compressor?
@@ -142,7 +163,10 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-100 text-orange-600">
+                <LightningIcon className="h-5 w-5" />
+              </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 Quick compression
               </h4>
@@ -152,7 +176,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-100 text-orange-600">
+                <ShieldIcon className="h-5 w-5" />
+              </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 No account needed
               </h4>
@@ -162,7 +189,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-orange-100 text-orange-600">
+                <ImageIcon className="h-5 w-5" />
+              </div>
               <h4 className="text-lg font-semibold text-gray-900">
                 Works on all devices
               </h4>
@@ -175,8 +205,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
             <h3 className="text-3xl font-bold tracking-tight text-gray-900">
               Who this tool is for
@@ -187,8 +217,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-4">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
               <h4 className="text-lg font-semibold text-gray-900">Creators</h4>
               <p className="mt-3 text-sm leading-6 text-gray-600">
                 Optimize images for content publishing, portfolios, and social
@@ -196,7 +226,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Freelancers
               </h4>
@@ -206,7 +236,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
               <h4 className="text-lg font-semibold text-gray-900">Students</h4>
               <p className="mt-3 text-sm leading-6 text-gray-600">
                 Make images smaller for assignments, forms, presentations, and
@@ -214,7 +244,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+            <div className="rounded-2xl border border-orange-100 bg-orange-50 p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Businesses
               </h4>
@@ -227,8 +257,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="bg-orange-50 py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <div className="text-center">
             <h3 className="text-3xl font-bold tracking-tight text-gray-900">
               Frequently Asked Questions
@@ -239,7 +269,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 space-y-4">
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Is this image compressor free to use?
               </h4>
@@ -248,7 +278,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Do I need to create an account?
               </h4>
@@ -257,7 +287,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Are my images uploaded to a server?
               </h4>
@@ -267,7 +297,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <div className="rounded-2xl border border-orange-100 bg-white p-6">
               <h4 className="text-lg font-semibold text-gray-900">
                 Which image formats are supported?
               </h4>
@@ -280,14 +310,14 @@ export default function Home() {
       </section>
 
       <section className="bg-white pb-4">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <AdPlaceholder label="Middle Content Ad Space" />
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
             <h3 className="text-2xl font-semibold text-gray-900">
               Important Notice
             </h3>
@@ -307,12 +337,12 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-16">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="rounded-3xl bg-black px-8 py-12 text-center text-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="rounded-3xl bg-orange-500 px-6 py-10 text-center text-white sm:px-8 sm:py-12">
             <h3 className="text-3xl font-bold tracking-tight">
               Ready to compress your image?
             </h3>
-            <p className="mt-4 text-lg text-gray-300">
+            <p className="mt-4 text-lg text-orange-100">
               Use Etarnity Image Compressor to reduce image size quickly,
               securely, and for free.
             </p>
@@ -320,8 +350,9 @@ export default function Home() {
             <div className="mt-8">
               <a
                 href="#compressor"
-                className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-100"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-orange-600 transition hover:bg-orange-100"
               >
+                <UploadIcon className="h-4 w-4" />
                 Start Compressing Now
               </a>
             </div>

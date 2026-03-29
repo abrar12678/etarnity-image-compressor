@@ -1,23 +1,12 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function SiteHeader() {
-    const pathname = usePathname();
-
-    const navLinkStyle = (path: string) =>
-        `rounded-full px-4 py-2 text-sm font-medium transition ${pathname === path
-            ? "bg-black text-white" // Active style
-            : "border border-gray-300 text-gray-700 hover:bg-gray-50" // Inactive style
-        }`;
-
     return (
-        <header className="border-b border-gray-100 bg-white">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <header className="border-b border-orange-100 bg-white/90 backdrop-blur-sm">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between">
                 <div>
                     <Link href="/" className="block">
-                        <h1 className="text-xl font-bold tracking-tight text-gray-900">
+                        <h1 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
                             Etarnity Image Compressor
                         </h1>
                     </Link>
@@ -25,41 +14,43 @@ export default function SiteHeader() {
                         By Etarnity Global Innovation
                     </p>
                 </div>
-                <div className="flex items-center gap-3">
+
+                <nav className="flex flex-wrap items-center gap-2">
                     <Link
                         href="/"
-                        className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                        className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
                     >
                         Home
                     </Link>
 
                     <Link
                         href="/about"
-                        className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                        className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
                     >
                         About
                     </Link>
 
                     <Link
                         href="/privacy-policy"
-                        className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                        className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
                     >
                         Privacy
                     </Link>
 
                     <Link
                         href="/terms"
-                        className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                        className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
                     >
                         Terms
                     </Link>
+
                     <Link
                         href="/contact"
-                        className="rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                        className="rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-600"
                     >
                         Contact
                     </Link>
-                </div>
+                </nav>
             </div>
         </header>
     );
