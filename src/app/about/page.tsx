@@ -7,8 +7,8 @@ export default function AboutPage() {
             <SiteHeader />
 
             <section className="border-b border-orange-100 bg-white">
-                <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-                    <span className="inline-block rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-700">
+                <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 animate-fade-up">
+                    <span className="interactive-smooth hover-grow-sm inline-block rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-700">
                         About Us
                     </span>
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
             <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
                 <div className="space-y-8">
-                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Our Mission
                         </h2>
@@ -37,7 +37,7 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Why We Built This Tool
                         </h2>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-3xl border border-orange-100 bg-orange-50 p-8">
                         <h2 className="text-2xl font-semibold text-gray-900">
                             Privacy First
                         </h2>

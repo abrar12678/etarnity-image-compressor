@@ -183,16 +183,18 @@ export default function ImageCompressor() {
     };
 
     return (
-        <div className="rounded-[28px] border border-orange-200 bg-orange-50/60 p-4 shadow-sm sm:p-6 md:p-8">
+        <div className="interactive-smooth rounded-[28px] border border-orange-200 bg-orange-50/60 p-4 shadow-sm hover:shadow-md sm:p-6 md:p-8">
             <div
-                className={`rounded-[24px] border-2 border-dashed bg-white p-5 transition sm:p-6 md:p-8 ${isDragging ? "border-orange-500 bg-orange-50" : "border-orange-200"
+                className={`interactive-smooth rounded-[24px] border-2 border-dashed bg-white p-5 sm:p-6 md:p-8 ${isDragging
+                    ? "border-orange-500 bg-orange-50 shadow-lg shadow-orange-100"
+                    : "border-orange-200 hover:border-orange-300 hover:bg-orange-50/40"
                     }`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
             >
-                <div className="text-center">
-                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
+                <div className="text-center animate-fade-up">
+                    <div className="animate-soft-float mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
                         <ImageIcon className="h-7 w-7" />
                     </div>
 
@@ -207,7 +209,7 @@ export default function ImageCompressor() {
                 <div className="mt-6 text-center">
                     <label
                         htmlFor="image-upload"
-                        className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600"
+                        className="interactive-smooth hover-lift-sm inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200"
                     >
                         <UploadIcon className="h-4 w-4" />
                         {selectedFile ? "Choose Another Image" : "Choose Image"}
@@ -230,7 +232,7 @@ export default function ImageCompressor() {
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-orange-100 bg-orange-50 p-4">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-orange-50 p-4">
                         <div className="flex items-center gap-2 text-orange-600">
                             <LightningIcon className="h-4 w-4" />
                             <p className="text-sm font-medium text-gray-800">Fast</p>
@@ -240,7 +242,7 @@ export default function ImageCompressor() {
                         </p>
                     </div>
 
-                    <div className="rounded-2xl border border-orange-100 bg-orange-50 p-4">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-orange-50 p-4">
                         <div className="flex items-center gap-2 text-orange-600">
                             <ShieldIcon className="h-4 w-4" />
                             <p className="text-sm font-medium text-gray-800">Private</p>
@@ -250,7 +252,7 @@ export default function ImageCompressor() {
                         </p>
                     </div>
 
-                    <div className="rounded-2xl border border-orange-100 bg-orange-50 p-4">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-orange-50 p-4">
                         <div className="flex items-center gap-2 text-orange-600">
                             <ImageIcon className="h-4 w-4" />
                             <p className="text-sm font-medium text-gray-800">Easy</p>
@@ -262,8 +264,8 @@ export default function ImageCompressor() {
                 </div>
 
                 {selectedFile && (
-                    <div className="mt-8 space-y-6">
-                        <div className="rounded-2xl border border-orange-100 bg-orange-50 p-4">
+                    <div className="mt-8 space-y-6 animate-fade-up">
+                        <div className="interactive-smooth hover-shadow-soft rounded-2xl border border-orange-100 bg-orange-50 p-4">
                             <p className="text-sm font-medium text-gray-700">
                                 Selected file:{" "}
                                 <span className="font-semibold text-gray-900">
@@ -301,7 +303,7 @@ export default function ImageCompressor() {
                             <select
                                 value={maxWidthPreset}
                                 onChange={(e) => setMaxWidthPreset(e.target.value)}
-                                className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-orange-400"
+                                className="interactive-smooth w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100"
                             >
                                 <option value="original">Original (no resize)</option>
                                 <option value="1920">1920px (high)</option>
@@ -315,7 +317,7 @@ export default function ImageCompressor() {
                             <button
                                 onClick={handleCompress}
                                 disabled={isCompressing}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-60"
+                                className="interactive-smooth hover-lift-sm inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200 disabled:cursor-not-allowed disabled:opacity-60"
                             >
                                 <LightningIcon className="h-4 w-4" />
                                 {isCompressing ? "Compressing..." : "Compress Image"}
@@ -324,7 +326,7 @@ export default function ImageCompressor() {
                             <button
                                 onClick={handleReset}
                                 type="button"
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-orange-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:bg-orange-50"
+                                className="interactive-smooth hover-lift-sm inline-flex w-full items-center justify-center gap-2 rounded-full border border-orange-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                             >
                                 <RefreshIcon className="h-4 w-4" />
                                 Reset
@@ -332,7 +334,7 @@ export default function ImageCompressor() {
                         </div>
 
                         <div className="grid gap-4 sm:grid-cols-3">
-                            <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                            <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-white p-4">
                                 <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
                                     Original Size
                                 </p>
@@ -341,7 +343,7 @@ export default function ImageCompressor() {
                                 </p>
                             </div>
 
-                            <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                            <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-white p-4">
                                 <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
                                     Compressed Size
                                 </p>
@@ -350,7 +352,7 @@ export default function ImageCompressor() {
                                 </p>
                             </div>
 
-                            <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                            <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-white p-4">
                                 <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
                                     Saved
                                 </p>
@@ -361,7 +363,7 @@ export default function ImageCompressor() {
                         </div>
 
                         <div className="grid gap-6 lg:grid-cols-2">
-                            <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                            <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-white p-4">
                                 <p className="mb-3 text-sm font-semibold text-gray-900">
                                     Original Image
                                 </p>
@@ -381,7 +383,7 @@ export default function ImageCompressor() {
                             </div>
 
                             {compressedPreviewUrl && compressedFile && (
-                                <div className="rounded-2xl border border-orange-100 bg-white p-4">
+                                <div className="interactive-smooth hover-lift-sm hover-shadow-soft rounded-2xl border border-orange-100 bg-white p-4">
                                     <p className="mb-3 text-sm font-semibold text-gray-900">
                                         Compressed Image
                                     </p>
@@ -404,7 +406,7 @@ export default function ImageCompressor() {
 
                                     <button
                                         onClick={handleDownload}
-                                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-700"
+                                        className="interactive-smooth hover-lift-sm mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 hover:shadow-lg"
                                     >
                                         <DownloadIcon className="h-4 w-4" />
                                         Download Compressed Image
@@ -416,13 +418,13 @@ export default function ImageCompressor() {
                 )}
 
                 {successMessage && (
-                    <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+                    <div className="animate-fade-up mt-6 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700 shadow-sm">
                         {successMessage}
                     </div>
                 )}
 
                 {error && (
-                    <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                    <div className="animate-fade-up mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600 shadow-sm">
                         {error}
                     </div>
                 )}

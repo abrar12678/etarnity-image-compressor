@@ -5,7 +5,7 @@ export default function SiteFooter() {
         <footer className="border-t border-orange-100 bg-white py-10">
             <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
                 <div className="mb-3 flex justify-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
+                    <div className="interactive-smooth hover-lift-sm hover-shadow-soft flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
                         <svg
                             viewBox="0 0 24 24"
                             fill="none"
@@ -42,16 +42,22 @@ export default function SiteFooter() {
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-500">
                     <Link
                         href="/privacy-policy"
-                        className="transition hover:text-orange-600"
+                        className="interactive-smooth hover:text-orange-600 hover:-translate-y-0.5"
                     >
                         Privacy Policy
                     </Link>
                     <span className="text-orange-200">|</span>
-                    <Link href="/terms" className="transition hover:text-orange-600">
+                    <Link
+                        href="/terms"
+                        className="interactive-smooth hover:text-orange-600 hover:-translate-y-0.5"
+                    >
                         Terms of Service
                     </Link>
                     <span className="text-orange-200">|</span>
-                    <Link href="/contact" className="transition hover:text-orange-600">
+                    <Link
+                        href="/contact"
+                        className="interactive-smooth hover:text-orange-600 hover:-translate-y-0.5"
+                    >
                         Contact Us
                     </Link>
                 </div>
@@ -63,7 +69,7 @@ export default function SiteFooter() {
                             href="https://etarnity.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-semibold text-orange-600 hover:text-orange-700"
+                            className="interactive-smooth font-semibold text-orange-600 hover:text-orange-700"
                         >
                             Etarnity
                         </a>
@@ -90,7 +96,7 @@ export default function SiteFooter() {
                         <span>Support:</span>
                         <a
                             href="mailto:your@email.com"
-                            className="font-medium text-orange-600 hover:text-orange-700"
+                            className="interactive-smooth font-medium text-orange-600 hover:text-orange-700"
                         >
                             your@email.com
                         </a>

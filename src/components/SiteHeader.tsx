@@ -44,11 +44,11 @@ export default function SiteHeader() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="border-b border-orange-100 bg-white/90 backdrop-blur-sm">
+        <header className="sticky top-0 z-50 border-b border-orange-100 bg-white/90 backdrop-blur-sm">
             <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
                 <div className="flex items-center justify-between gap-4">
-                    <div>
-                        <Link href="/" className="block">
+                    <div className="animate-fade-up">
+                        <Link href="/" className="block interactive-smooth hover-lift-sm">
                             <h1 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
                                 Etarnity Image Compressor
                             </h1>
@@ -61,7 +61,7 @@ export default function SiteHeader() {
                     <button
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
-                        className="inline-flex items-center justify-center rounded-full border border-orange-200 bg-white p-3 text-gray-700 transition hover:bg-orange-50 md:hidden"
+                        className="interactive-smooth hover-lift-sm inline-flex items-center justify-center rounded-full border border-orange-200 bg-white p-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm md:hidden"
                         aria-label="Toggle navigation menu"
                     >
                         {isOpen ? (
@@ -74,46 +74,49 @@ export default function SiteHeader() {
                     <nav className="hidden items-center gap-2 md:flex">
                         <Link
                             href="/"
-                            className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                         >
                             Home
                         </Link>
 
                         <Link
                             href="/about"
-                            className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                         >
                             About
                         </Link>
 
                         <Link
                             href="/privacy-policy"
-                            className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                         >
                             Privacy
                         </Link>
 
                         <Link
                             href="/terms"
-                            className="rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                         >
                             Terms
                         </Link>
 
                         <Link
                             href="/contact"
-                            className="rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-600"
+                            className="interactive-smooth hover-lift-sm rounded-full border border-orange-500 bg-orange-500 px-4 py-2 text-sm font-medium text-white hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200"
                         >
                             Contact
                         </Link>
                     </nav>
                 </div>
 
-                {isOpen && (
-                    <nav className="mt-4 flex flex-col gap-2 border-t border-orange-100 pt-4 md:hidden">
+                <div
+                    className={`overflow-hidden transition-all duration-300 ease-out md:hidden ${isOpen ? "mt-4 max-h-96 opacity-100" : "max-h-0 opacity-0"
+                        }`}
+                >
+                    <nav className="flex flex-col gap-2 border-t border-orange-100 pt-4">
                         <Link
                             href="/"
-                            className="rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                             onClick={() => setIsOpen(false)}
                         >
                             Home
@@ -121,7 +124,7 @@ export default function SiteHeader() {
 
                         <Link
                             href="/about"
-                            className="rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                             onClick={() => setIsOpen(false)}
                         >
                             About
@@ -129,7 +132,7 @@ export default function SiteHeader() {
 
                         <Link
                             href="/privacy-policy"
-                            className="rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                             onClick={() => setIsOpen(false)}
                         >
                             Privacy
@@ -137,7 +140,7 @@ export default function SiteHeader() {
 
                         <Link
                             href="/terms"
-                            className="rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition hover:bg-orange-50"
+                            className="interactive-smooth hover-lift-sm rounded-2xl border border-orange-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm"
                             onClick={() => setIsOpen(false)}
                         >
                             Terms
@@ -145,13 +148,13 @@ export default function SiteHeader() {
 
                         <Link
                             href="/contact"
-                            className="rounded-2xl border border-orange-500 bg-orange-500 px-4 py-3 text-sm font-medium text-white transition hover:bg-orange-600"
+                            className="interactive-smooth hover-lift-sm rounded-2xl border border-orange-500 bg-orange-500 px-4 py-3 text-sm font-medium text-white hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200"
                             onClick={() => setIsOpen(false)}
                         >
                             Contact
                         </Link>
                     </nav>
-                )}
+                </div>
             </div>
         </header>
     );
